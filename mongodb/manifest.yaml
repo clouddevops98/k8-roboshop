@@ -25,7 +25,7 @@ spec:
         tier: db
     spec:
       containers:
-      - name: nginx
+      - name: mongodb
         image: somayya98/mongodb:v1
         readinessProbe:
           tcpSocket:
