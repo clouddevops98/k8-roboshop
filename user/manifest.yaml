@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: user
-  name: roboshop
+  namespace: roboshop
 data:
   MONGO: "true"
   REDIS_URL: "redis://redis:6379"
@@ -36,7 +36,7 @@ spec:
     spec:
       containers:
       - name: user
-        image: somayya98/user:v1
+        image: joindevops/user:v1
         imagePullPolicy: Always
         envFrom:
         - configMapRef:
